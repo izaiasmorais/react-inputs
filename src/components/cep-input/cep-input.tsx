@@ -1,7 +1,8 @@
-import type { Dispatch, SetStateAction } from "react";
+import {  type Dispatch, type SetStateAction } from "react";
 import { InputCep } from "react-input-cep";
 
 interface CepInputProps {
+	cep: string;
 	setCep: Dispatch<SetStateAction<string>>;
 }
 
@@ -13,11 +14,12 @@ const styles = {
 	},
 };
 
-export function CepInput({ setCep }: CepInputProps) {
+export function CepInput({ setCep, cep }: CepInputProps) {
 	return (
 		<InputCep
 			placeholder="00000-000"
 			name="cep"
+			value={cep}
 			onValueChange={setCep}
 			styles={styles}
 		/>

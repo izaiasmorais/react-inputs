@@ -7,8 +7,6 @@ export default function Home() {
 	const [phoneNumber, setPhoneNumber] = useState<string>("");
 	const [cep, setCep] = useState<string>("");
 
-	console.log(cep);
-
 	return (
 		<div className="text-black flex w-full h-screen items-center justify-center">
 			<div className="p-6 rounded-md border border-gray-300 flex flex-col gap-4 w-[500px]">
@@ -28,7 +26,7 @@ export default function Home() {
 						CEP
 					</label>
 
-					<CepInput setCep={setCep} />
+					<CepInput setCep={setCep} cep={cep} />
 				</div>
 			</div>
 		</div>
